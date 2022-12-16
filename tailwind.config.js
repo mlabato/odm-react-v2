@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         montserrat: ["'Montserrat'"],
       },
+      backgroundImage: {
+        'mate': "url('/public/images/mate-bg.jpg')",
+      },
     },
   },
   plugins: [],
