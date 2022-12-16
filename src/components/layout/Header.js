@@ -16,7 +16,7 @@ const Header = () => {
       </article>
       
       <article className="bg-[#F8F9FA] border-b-2 border-[#A61212]">
-        <div className="mx-[10rem] flex flex-row items-center justify-between py-[1rem]">
+        <div className=" flex flex-row items-center justify-between mx-[10rem] py-[1rem]">
           <img src="/images/logo.png" alt="" className="w-[8rem]" />
           <SearchBar />
           <BsCart2 className="text-[2.5rem] text-[#A61212]" />

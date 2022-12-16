@@ -2,9 +2,10 @@ import {FaSearch} from "react-icons/fa"
 
 const searchBar = () => {
     return(
-        <form className="relative group" >
+      <section className="relative">
+        
         <input
-          className="bg-[#F8F9FA] border-2 border-red-700 w-[25rem] text-red-700  p-[.5rem] rounded-lg  "
+          className="bg-[#F8F9FA] border-2 border-red-700 w-[30rem] text-red-700  p-[.5rem] rounded-lg  "
           type="text"
           placeholder="¿Qué estás buscando?"
         
@@ -13,7 +14,8 @@ const searchBar = () => {
           <FaSearch />
         </button>
         
-      </form>
+   
+      </section>
     )
 }
 
