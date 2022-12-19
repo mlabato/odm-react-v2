@@ -22,10 +22,15 @@ module.exports = {
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" }
+        },
+        "slide-down": {
+          "from": {transform: "translateY(-3rem)", opacity: 0},
+          "to": {transform: "translateY(0)", opacity: 1}
         }
-      },
+    },
       animation: {
-        wiggle: "wiggle 200ms ease-in-out"
+        wiggle: "wiggle 200ms ease-in-out",
+        "slide-down": "slide-down 300ms ease-out"
       }
     },
   },

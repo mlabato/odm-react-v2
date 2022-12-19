@@ -1,11 +1,11 @@
+import React from "react";
 import { useContext, useState} from "react";
 
 import Modal from "../ui/Modal";
 import CartItem from "./CartItem";
-import classes from "./Cart.module.css";
 import CartContext from "../../store/cart-context";
 import Checkout from "./Checkout";
-import React from "react";
+
 
 const Cart = (props) => {
   const [isCheckout, setIsCheckout] = useState(false);
@@ -55,7 +55,7 @@ const Cart = (props) => {
 
   const cartItems = (
     cartCtx.items.length > 0 ?
-    (<ul className={classes["cart-items"]}>
+    (<ul className="list-none max-h-[20rem] overflow-auto">
       {cartCtx.items.map((item) => (
         <CartItem
           key={item.id}
@@ -70,27 +70,29 @@ const Cart = (props) => {
       ))}
     </ul>)
     :
-    <p className="text-red-700 text-center">Aún no se agregaron productos al carrito!</p>
+    <p className="text-[#A61212] pt-[2rem] font-bold text-center">Aún no se agregaron productos al carrito</p>
   );
 
   const modalActions = (
-    <div className={classes.actions}>
-      <button className={classes["button--alt"]} onClick={props.onClose}>
+    <div className="text-right">
+      <button className="text-white bg-[#A61212] cursor-pointer w-[5rem]  p-[.5rem] rounded-lg " onClick={props.onClose}>
         Cerrar
       </button>
       {hasItems && (
-        <button className={classes.button} onClick={orderHandler}>
+        <button className="text-white bg-[#A61212] cursor-pointer ml-[1rem] w-[5rem] p-[.5rem] rounded-lg" onClick={orderHandler}>
           Comprar
         </button>
       )}
     </div>
   );
+  
+
 
   const cartModalContent = (
     <React.Fragment>
       {cartItems}
-      {console.log(cartCtx)}
-      <div className={classes.total}>
+      
+      <div className="flex justify-between items-center font-bold my-[1rem] text-[1.5rem]">
         <span>Precio total</span>
         <span>{totalAmount}</span>
       </div>
@@ -100,6 +102,8 @@ const Cart = (props) => {
       {!isCheckout && modalActions}
     </React.Fragment>
   );
+
+
 
   const isSubmittingModalContent = <p>Procesando la información</p>;
   const didSubmitModalContent = <p>El pedido ha sido procesado!</p>;
