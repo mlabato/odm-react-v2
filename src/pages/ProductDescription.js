@@ -5,10 +5,10 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import CategoryDescriptionContainer from "../components/layout/CategoryDescriptionContainer";
 
-const ProductDescription = () => {
+const ProductDescription = (props) => {
     return(
         <Fragment>
-        <Header />
+        <Header onClick={props.onShowCart}/>
         <Navbar />
         <CategoryDescriptionContainer />
         <Footer />
