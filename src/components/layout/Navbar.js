@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <section className="bg-[#F8F9FA]    ">
       <article className="mx-[10rem] flex flex-row justify-center py-[.75rem]">
-        <a href="/#" className="text-[#A61212] text-[1.5rem]  hover:font-bold">
+        <a href="/nuestros-productos" className="text-[#A61212] text-[1.5rem]  hover:font-bold">
           Productos
         </a>
         <a
@@ -11,11 +11,11 @@ const Navbar = () => {
         >
           Personalizá tu mate
         </a>
-        <a href="/#" className="text-[#A61212] text-[1.5rem]   hover:font-bold">
+        <a href="#contacto" className="text-[#A61212] text-[1.5rem]   hover:font-bold">
           Contacto
         </a>
 
-        <a href="/#" className="text-[#A61212] text-[1.5rem] ml-[4rem]  hover:font-bold">
+        <a href="/nosotros" className="text-[#A61212] text-[1.5rem] ml-[4rem]  hover:font-bold">
           Nosotros
         </a>
       </article>

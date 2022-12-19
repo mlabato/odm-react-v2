@@ -22,7 +22,7 @@ const Footer = () => {
     <section className="bg-[#D9D9D9]  ">
       <article className="mx-[10rem] flex flex-row justify-between border-b-2 border-[#A61212] py-[3rem]">
         <div>
-          <p className="font-bold text-[2rem] text-[#A61212]">Contacto</p>
+          <p id="contacto" className="font-bold text-[2rem] text-[#A61212]">Contacto</p>
           <div className="text-[1.2rem] my-[1rem] flex flex-row items-center">
             <FaPhone className="mr-[1rem] text-[#A61212]" /> +5492323-123456
           </div>
