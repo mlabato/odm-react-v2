@@ -10,8 +10,8 @@ const ProductsContainer = () => {
 
   return (
     <section className="w-3/4  flex flex-row flex-wrap">
-        {console.log(products)}
-      {products.map((product) => {
+       
+      {products?.map((product) => {
         return <ProductCard model={product.model} price={product.price} />;
       })}
      

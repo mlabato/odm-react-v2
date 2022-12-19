@@ -5,7 +5,7 @@ const CategoryBar = () => {
   const productsCtx = useContext(ProductContext);
   const categories = productsCtx?.products?.categories;
 
-  const mappedCategories = categories.map((category) => {
+  const mappedCategories = categories?.map((category) => {
     return (
       <li className="text-[1.5rem] my-[1rem] hover:text-[#A61212] capitalize">
         <a href="/#">{category.category}</a>
