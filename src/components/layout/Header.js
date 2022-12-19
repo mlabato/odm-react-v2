@@ -1,8 +1,8 @@
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
-import {BsCart2} from "react-icons/bs"
+import CartButton from "../ui/CartButton"
 import SearchBar from "../ui/SearchBar";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <section>
       <article className="bg-[#D9D9D9] flex flex-row items-center p-[.5rem]">
@@ -19,7 +19,7 @@ const Header = () => {
         <div className=" flex flex-row items-center justify-between mx-[10rem] py-[1rem]">
           <img src="/images/logo.png" alt="" className="w-[8rem]" />
           <SearchBar />
-          <BsCart2 className="text-[2.5rem] text-[#A61212]" />
+          <CartButton onClick={props.onClick} />
         </div>
       </article>
     </section>
