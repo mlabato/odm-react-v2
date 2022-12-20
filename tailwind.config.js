@@ -26,11 +26,17 @@ module.exports = {
         "slide-down": {
           "from": {transform: "translateY(-3rem)", opacity: 0},
           "to": {transform: "translateY(0)", opacity: 1}
-        }
+        },
+        "slide-right": {
+          "0%": {transform: "translateX(1.5rem)"},
+          
+          "100%": {transform: "translateX(3rem)"}
+        },
     },
       animation: {
         wiggle: "wiggle 200ms ease-in-out",
-        "slide-down": "slide-down 300ms ease-out"
+        "slide-down": "slide-down 300ms ease-out",
+        "slide-right": "slide-right 600ms ease-out",
       }
     },
   },
