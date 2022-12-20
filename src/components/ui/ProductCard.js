@@ -23,8 +23,8 @@ const ProductCard = (props) => {
 
   return (
     <article className="w-[20rem] hover:bg-white p-[1rem] m-[1rem] hover:rounded-lg border-b-2 border-[#D9D9D9] hover:border-none ">
-      <img src="/images/camionero.png" alt=""></img>
-      <div className="text-center">{props.model}</div>
+      <img src={props.image} alt=""></img>
+      <div className="text-center pt-[1rem] h-[4rem]">{props.model}</div>
       <div className="text-[#A61212] font-bold text-[1.5rem] my-[.5rem] text-center">
         {"$ " + props.price}
       </div>
