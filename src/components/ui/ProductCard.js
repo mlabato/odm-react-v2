@@ -36,7 +36,7 @@ const ProductCard = (props) => {
         >
           <FaCartPlus />
         </button>{" "}
-        <FaEye />
+        <a href={"/productos/" + props.id}><FaEye /></a>
       </div>
     </article>
   );
