@@ -5,6 +5,7 @@ import Cart from "../src/components/cart/Cart";
 
 import Home from "./pages/Home";
 import ProductDescription from "./pages/ProductDescription";
+import ProductDetail from "./pages/ProductDetail";
 import About from "./pages/About";
 import SearchResults from "./pages/SearchResults";
 
@@ -28,6 +29,14 @@ function App() {
           <Route
             path="/nuestros-productos"
             element={<ProductDescription onShowCart={showCartHandler} />}
+          />
+           <Route
+            path="/productos/:id"
+            element={
+              <ProductDetail
+                onShowCart={showCartHandler}
+              />
+            }
           />
           <Route
             path="/nosotros"
