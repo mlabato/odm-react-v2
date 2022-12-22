@@ -15,7 +15,7 @@ const PriceCard = (props) => {
             className="text-[1.2rem]  mt-[0.5rem] p-[0.5rem] text-green-600"
           >
             {" "}
-            {props.discount + "%"}{" "}
+            {props.discount + "% OFF"}{" "}
           </div>
         </div>
       ) : (
