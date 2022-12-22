@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { useContext, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
-
 import CartContext from "../../store/cart-context";
+import PriceCard from "../ui/PriceCard"
 
 const ProductDetailCard = (props) => {
   const cartCtx = useContext(CartContext);
@@ -106,7 +106,7 @@ const ProductDetailCard = (props) => {
 
           <div className="flex flex-row mt-[4rem]">
             <div className="text-[#A61212] text-[3rem] mr-[2rem] font-bold">
-              $ {props.price}
+              <PriceCard price={props.price} discount={props.discount} />
             </div>
             <button
               className={`${
