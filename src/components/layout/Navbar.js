@@ -19,8 +19,8 @@ const Navbar = () => {
           Nosotros
         </a>
       </article>
-      <article >
-        <img src="/images/mate-bg.jpg" alt="" className="w-full h-[30rem] object-cover"/>
+      <article className="overflow-hidden">
+        <img src="/images/mate-bg.jpg" alt="" className="w-full h-[30rem]  object-cover hover:scale-125 duration-1000"/>
       </article>
     </section>
   );
