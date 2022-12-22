@@ -80,7 +80,7 @@ const ProductDetailCard = (props) => {
 
   return (
     <Fragment>
-      <section className="mx-[20rem] py-[3rem] flex flex-row items-center">
+      <section className="mx-[20rem] my-[5rem] flex flex-row items-center">
         <img src={props.image} alt="" className="w-[35rem]"></img>
         <article className="flex flex-col">
           <div className="font-bold text-[2.3rem]">{props.model}</div>
@@ -118,6 +118,12 @@ const ProductDetailCard = (props) => {
               <FaCartPlus />
             </button>{" "}
           </div>
+          <a
+            href="/"
+            className="text-center font-bold mt-[4rem] text-[1.5rem] hover:text-[#A61212]"
+          >
+            Volver a la Home
+          </a>
         </article>
       </section>
     </Fragment>
