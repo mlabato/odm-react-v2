@@ -23,7 +23,7 @@ const CategoryBar = () => {
         type="button"
         value={category.category}
         key={i}
-        className="capitalize text-left text-[1.5rem] my-[1rem]   hover:animate-slide-right hover:text-[#A61212]"
+        className="capitalize text-left text-[1.5rem] my-[1rem]   hover:font-bold hover:text-[#A61212]"
         onClick={handleCategoriesClick}
       >
         {category.category}
@@ -36,14 +36,14 @@ const CategoryBar = () => {
       <p className="font-bold text-[2rem]">Productos</p>
       <div className="flex flex-col  justify-start">
       <button
-          className="text-[1.5rem] text-left my-[1rem] hover:animate-slide-right capitalize hover:text-[#A61212]"
+          className="text-[1.5rem] text-left my-[1rem] hover:font-bold capitalize hover:text-[#A61212]"
           onClick={handleTotalProductsClick}
         >
           Todos
         </button>
 
         <button
-          className="text-[1.5rem] text-left my-[1rem] hover:animate-slide-right capitalize hover:text-[#A61212]"
+          className="text-[1.5rem] text-left my-[1rem] hover:font-bold capitalize hover:text-[#A61212]"
           onClick={handleOnSaleClick}
         >
           Ofertas
