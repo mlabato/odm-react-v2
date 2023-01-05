@@ -32,6 +32,7 @@ export const ProductsContextProvider = (props) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        setProductIsLoading(true);
         const response = await fetch(urlState.categoryUrl);
 
         const body = await response.json();
