@@ -10,9 +10,9 @@ const Footer = () => {
     "visa@2x.png",
   ];
 
-  const imagesMap = paymentMethodsImages.map((image) => {
+  const imagesMap = paymentMethodsImages.map((i, image) => {
     return (
-      <li>
+      <li key={i}>
         <img src={"/images/" + image} alt="" className="h-[3rem] mr-[1rem]" />
       </li>
     );

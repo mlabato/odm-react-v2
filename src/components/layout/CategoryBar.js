@@ -3,32 +3,54 @@ import ProductContext from "../../store/product-context";
 
 const CategoryBar = () => {
   const productsCtx = useContext(ProductContext);
-  const categories = productsCtx?.products?.categories;
+  const categories = productsCtx?.categories;
 
-  const mappedCategories = categories?.map((category) => {
+  const handleCategoriesClick = (e) => {
+    productsCtx.updateUrl("/category/" + e.target.value);
+  };
+
+  const handleOnSaleClick = () => {
+    productsCtx.updateUrl("/onsale");
+  };
+
+  const handleTotalProductsClick = () => {
+    productsCtx.updateUrl("/products");
+  };
+
+  const mappedCategories = categories?.map((category, i) => {
     return (
-      <li className="text-[1.5rem] my-[1rem]  capitalize hover:animate-slide-right hover:text-[#A61212]">
-        <a href="/#"  >
-          {category.category}
-        </a>
-      </li>
+      <button
+        type="button"
+        value={category.category}
+        key={i}
+        className="capitalize text-left text-[1.5rem] my-[1rem]   hover:animate-slide-right hover:text-[#A61212]"
+        onClick={handleCategoriesClick}
+      >
+        {category.category}
+      </button>
     );
   });
 
   return (
     <section className="w-1/4">
       <p className="font-bold text-[2rem]">Productos</p>
-      <ul>
-        <li className="text-[1.5rem] my-[1rem] hover:animate-slide-right capitalize hover:text-[#A61212]">
-          <a
-            href="/#"
-           
-          >
-            Ofertas
-          </a>
-        </li>
+      <div className="flex flex-col  justify-start">
+        <button
+          className="text-[1.5rem] text-left my-[1rem] hover:animate-slide-right capitalize hover:text-[#A61212]"
+          onClick={handleTotalProductsClick}
+        >
+          Todos
+        </button>
+
+        <button
+          className="text-[1.5rem] text-left my-[1rem] hover:animate-slide-right capitalize hover:text-[#A61212]"
+          onClick={handleOnSaleClick}
+        >
+          Ofertas
+        </button>
+
         {mappedCategories}
-      </ul>
+      </div>
     </section>
   );
 };
