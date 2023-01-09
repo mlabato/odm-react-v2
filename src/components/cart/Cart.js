@@ -29,24 +29,26 @@ const Cart = (props) => {
     cartCtx.addItem(item);
   };
 
-  const orderHandler = () => {
-    setIsCheckout(true);
-  };
-
   //THIS WILL CHANGE WHEN THE API GETS UPDATED
-  const submitOrderHandler = async (userData) => {
+  const submitOrderHandler = async () => {
     setIsSubmitting(true);
 
-    await fetch(
-      "https://foodproject-7edcc-default-rtdb.firebaseio.com/orders.json",
-      {
-        method: "post",
-        body: JSON.stringify({
-          user: userData,
-          orderedItems: cartCtx.items,
-        }),
+    try {
+      const response = await fetch("/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: cartCtx.items }),
+      })
+      const body = await response.json();
+
+      if (response.status === 201){
+        const url = body.init_point
+        window.location.replace(url)
       }
-    );
+      
+    } catch (error) {
+      console.log(error);
+    } 
 
     setIsSubmitting(false);
     setDidSubmit(true);
@@ -79,7 +81,7 @@ const Cart = (props) => {
         Cerrar
       </button>
       {hasItems && (
-        <button className="text-white bg-[#A61212] cursor-pointer ml-[1rem] w-[5rem] p-[.5rem] rounded-lg" onClick={orderHandler}>
+        <button className="text-white bg-[#A61212] cursor-pointer ml-[1rem] w-[5rem] p-[.5rem] rounded-lg" onClick={submitOrderHandler}>
           Comprar
         </button>
       )}
@@ -105,8 +107,8 @@ const Cart = (props) => {
 
 
 
-  const isSubmittingModalContent = <p>Procesando la información</p>;
-  const didSubmitModalContent = <p>El pedido ha sido procesado!</p>;
+  const isSubmittingModalContent = <p className="text-[#A61212] p-[1rem] font-bold text-center text-[1.5rem]">Tu pedido se está procesando</p>;
+  const didSubmitModalContent = <p className="text-[#A61212] p-[1rem] font-bold text-center text-[1.5rem]">El pedido ha sido procesado!</p>;
 
   return (
     <Modal onClose={props.onClose}>
