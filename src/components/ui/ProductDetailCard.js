@@ -66,13 +66,15 @@ const ProductDetailCard = (props) => {
   const renderMaterial = (category) => {
     switch (category) {
       case 1:
-        return "Aluminio";
+        return "Alpaca";
       case 2:
-        return "Alpaca Lisa";
+        return "Acero inoxidable";
       case 3:
-        return "Alpaca Cincelada";
+        return "Cuero";
       case 4:
-        return "Sin Virola";
+        return "Ecocuero";
+        case 5:
+          return "No aplica";
       default:
         return "foo";
     }
@@ -81,7 +83,8 @@ const ProductDetailCard = (props) => {
   return (
     <Fragment>
       <section className="mx-[20rem] my-[5rem] flex flex-row items-center">
-        <img src={props.image} alt="" className="w-[35rem]"></img>
+        
+        <img src={"http://localhost:3000/images/productImages/" + props.image} alt="" className="w-[35rem]"></img>
         <article className="flex flex-col">
           <div className="font-bold text-[2.3rem]">{props.model}</div>
           <div className="text-[1.5rem] mb-[2rem]">{props.description}</div>

@@ -16,7 +16,7 @@ const ProductDetail = (props) => {
   useEffect(() => {
     const isLoading = () => {
       if (!productsCtx.isLoading) {
-        const products = productsCtx?.products.products;
+        const products = productsCtx?.products;
 
         const filteredProduct = products?.filter(
           (product) => product.id.toString() === id
@@ -34,9 +34,10 @@ const ProductDetail = (props) => {
       <Header onClick={props.onShowCart} />
 
       <Navbar />
-
+      {console.log(selectedProduct)}
       {productsCtx.isLoading && <Spinner />}
       {!productsCtx.isLoading && (
+        
         <ProductDetailCard
           model={selectedProduct.model}
           price={selectedProduct.price}
@@ -45,9 +46,9 @@ const ProductDetail = (props) => {
           discount={selectedProduct.discount}
           image={selectedProduct.image}
           description={selectedProduct.description}
-          virola={selectedProduct.virola}
-          color={selectedProduct.color}
-          material={selectedProduct.material}
+          virola={selectedProduct.virola_id}
+          color={selectedProduct.color_id}
+          material={selectedProduct.material_id}
         />
       )}
 

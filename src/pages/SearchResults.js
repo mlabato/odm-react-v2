@@ -55,7 +55,7 @@ const SearchResults = (props) => {
       <Navbar />
       <section className="bg-[#F8F9FA] py-[3rem] flex flex-col justify-center">
         <article className="text-center font-bold text-[3rem]">{title}</article>
-
+        {console.log(searchedProducts)}
         <article className="flex flex-row mx-[10rem] justify-center flex-wrap">
           {searchResult &&
             searchedProducts.map((product, i) => {
