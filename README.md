@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Front-end service for e-commerce website "Outlet de Mates". 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction
 
-## Available Scripts
+Once i finished my Full Stack Developer studies at Digital House i was excited about giving my first steps as a web developer, so I contacted an instagram entepreneur, Nicolas. He didn't have money to pay me and i didn't have enough experience to develop an e-commerce project alone. So i proposed him to give small steps toward the full project without the pressure of having deadlines. This helped me to keep studying and learning new things.
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+First of all, i had to get in touch with Nicolas' commercial needs, so the first step was to create an SQL database (the script can be found as odm-db.sql) to store all the product's and user's data (the script can be found as odmdata.sql).
+I realised that the web needed two services: a back-end and a front-end, both hosted in different servers, communicated by an API. I chose to develop the front-end with React framework and Tailwind.css for the styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Functionalities
+The service offer:
+- API consumption with Fetch
+- Use of React Hooks (useContext, useEffect, useState, useNavigate, useParams, useReducer) to build reusable and scalable code.
+- Routing with react-router
+- Stying with Tailwind.css
+- Home, product categories, product sales and product details pages
+- Search bar
+- Mercado Pago Integration
 
-### `npm test`
+## Framework
+- React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Extra libraries
+- Tailwind CSS
+- React-Router-dom
 
-### `npm run build`
+## To do list
+As i'm still working with the project, the nexts steps will include:
+- Responsive mode
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
